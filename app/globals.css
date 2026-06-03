@@ -50,8 +50,11 @@ main {
 }
 
 .brand {
-  font-size: 18px;
-  font-weight: 700;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
 }
 
 .site-nav,
@@ -296,6 +299,453 @@ p {
   font-weight: 700;
   padding-bottom: 4px;
   white-space: nowrap;
+}
+
+.magazine-hero {
+  display: grid;
+  min-height: clamp(660px, 86vh, 860px);
+  overflow: hidden;
+  position: relative;
+}
+
+.magazine-hero-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.magazine-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(31, 23, 17, 0.68), rgba(31, 23, 17, 0.24) 52%, rgba(31, 23, 17, 0.05)),
+    linear-gradient(0deg, rgba(31, 23, 17, 0.34), rgba(31, 23, 17, 0.06) 48%);
+  inset: 0;
+  position: absolute;
+}
+
+.magazine-hero-copy {
+  align-self: center;
+  color: #fffaf4;
+  display: grid;
+  gap: 24px;
+  justify-self: center;
+  max-width: 1040px;
+  padding: 64px 28px 86px;
+  position: relative;
+  width: min(100%, 1240px);
+}
+
+.magazine-hero-copy .eyebrow {
+  color: #efd5be;
+}
+
+.magazine-hero-copy h1 {
+  font-size: clamp(48px, 7.2vw, 96px);
+  max-width: 940px;
+}
+
+.magazine-hero-copy .lede {
+  color: rgba(255, 250, 244, 0.88);
+  font-size: clamp(18px, 2vw, 24px);
+  max-width: 760px;
+}
+
+.hero-link-grid {
+  display: grid;
+  align-items: stretch;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 12px;
+  max-width: 1080px;
+}
+
+.hero-link-card {
+  background: rgba(255, 250, 244, 0.88);
+  border-radius: 8px;
+  color: var(--text);
+  display: grid;
+  grid-template-rows: minmax(58px, auto) 1fr;
+  min-height: 158px;
+  padding: 20px;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.hero-link-card span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2vw, 28px);
+  line-height: 1.02;
+  max-width: 210px;
+}
+
+.hero-link-card p {
+  align-self: start;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+  max-width: 220px;
+}
+
+.hero-link-card:hover {
+  background: #fffaf4;
+  box-shadow: 0 18px 42px rgba(31, 23, 17, 0.18);
+  transform: translateY(-3px);
+}
+
+.hero-link-card:focus-visible,
+.brand:focus-visible,
+.site-nav a:focus-visible {
+  outline: 2px solid rgba(168, 94, 61, 0.72);
+  outline-offset: 4px;
+}
+
+.favorites-strip {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 44px 28px 72px;
+}
+
+.favorites-header {
+  align-items: end;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 0.58fr);
+  margin-bottom: 26px;
+}
+
+.favorites-header h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+  max-width: 660px;
+}
+
+.favorites-track {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.favorite-card {
+  display: grid;
+  gap: 14px;
+}
+
+.favorite-card img {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.favorite-card div {
+  display: grid;
+  gap: 9px;
+}
+
+.favorite-card p {
+  color: var(--cranberry);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.favorite-card h3 {
+  font-size: clamp(23px, 2vw, 30px);
+  line-height: 1.02;
+}
+
+.favorite-card:hover h3 {
+  color: var(--accent-dark);
+}
+
+.favorite-card:focus-visible {
+  outline: 2px solid rgba(168, 94, 61, 0.72);
+  outline-offset: 6px;
+}
+
+.magazine-section {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 104px 28px;
+}
+
+.magazine-heading {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 44px;
+  max-width: 830px;
+}
+
+.magazine-heading h2 {
+  font-size: clamp(38px, 5.5vw, 68px);
+}
+
+.start-section {
+  padding-bottom: 56px;
+}
+
+.start-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.start-card {
+  background: rgba(255, 255, 255, 0.52);
+  border-radius: 8px;
+  display: grid;
+  gap: 16px;
+  min-height: 210px;
+  padding: 26px;
+}
+
+.start-card h3 {
+  font-size: clamp(25px, 2.5vw, 34px);
+}
+
+.start-card p {
+  align-self: end;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.story-section {
+  padding-top: 78px;
+}
+
+.story-layout {
+  align-items: end;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
+}
+
+.story-tile {
+  display: grid;
+  gap: 20px;
+}
+
+.story-tile-large {
+  transform: translateY(34px);
+}
+
+.story-tile img,
+.gift-section img,
+.magazine-heading-split img,
+.nook-image-stack img {
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.story-tile img {
+  aspect-ratio: 4 / 5;
+}
+
+.story-tile-large img {
+  aspect-ratio: 16 / 11;
+}
+
+.story-tile p {
+  color: var(--cranberry);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.story-tile h3 {
+  font-size: clamp(30px, 4vw, 54px);
+  max-width: 680px;
+}
+
+.story-tile span {
+  color: var(--muted);
+  display: block;
+  font-size: 17px;
+  margin-top: 12px;
+  max-width: 560px;
+}
+
+.magazine-band {
+  background: #eee3d6;
+  margin: 72px 0 0;
+  padding: 104px 28px;
+}
+
+.mood-section {
+  align-items: center;
+  display: grid;
+  gap: 62px;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+}
+
+.mood-section > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1184px;
+  width: 100%;
+}
+
+.mood-copy {
+  display: grid;
+  gap: 20px;
+}
+
+.mood-copy h2 {
+  max-width: 520px;
+}
+
+.mood-copy p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 520px;
+}
+
+.mood-board {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mood-card {
+  display: grid;
+  gap: 12px;
+}
+
+.mood-card img {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.mood-card span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.02;
+}
+
+.mood-card p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.mood-card:nth-child(2),
+.mood-card:nth-child(4) {
+  transform: translateY(28px);
+}
+
+.magazine-heading-split {
+  align-items: end;
+  display: grid;
+  gap: 56px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  max-width: none;
+}
+
+.magazine-heading-split img {
+  aspect-ratio: 4 / 5;
+}
+
+.room-row {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.room-link {
+  border-top: 1px solid rgba(112, 66, 47, 0.18);
+  display: grid;
+  gap: 18px;
+  min-height: 210px;
+  padding: 28px 34px 28px 0;
+}
+
+.room-link + .room-link {
+  padding-left: 34px;
+}
+
+.room-link h3 {
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.room-link p {
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 300px;
+}
+
+.gift-section {
+  align-items: center;
+  display: grid;
+  gap: 68px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.9fr);
+}
+
+.gift-section img {
+  aspect-ratio: 5 / 6;
+}
+
+.gift-copy {
+  display: grid;
+  gap: 26px;
+  max-width: 610px;
+}
+
+.gift-list {
+  display: grid;
+  gap: 18px;
+}
+
+.gift-list p {
+  border-top: 1px solid rgba(112, 66, 47, 0.18);
+  color: var(--muted);
+  font-size: 18px;
+  padding-top: 18px;
+}
+
+.nook-section {
+  align-items: center;
+  display: grid;
+  gap: 70px;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1fr);
+  padding-bottom: 126px;
+}
+
+.nook-copy {
+  display: grid;
+  gap: 24px;
+}
+
+.nook-copy p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.nook-image-stack {
+  align-items: end;
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(180px, 0.32fr);
+}
+
+.nook-image-stack img:first-child {
+  aspect-ratio: 4 / 5;
+}
+
+.nook-image-stack img:last-child {
+  aspect-ratio: 1;
+  margin-left: -52px;
+  margin-bottom: -38px;
+  position: relative;
+  width: min(100%, 280px);
 }
 
 .editorial-page {
@@ -578,6 +1028,109 @@ p {
     padding-bottom: 48px;
   }
 
+  .magazine-hero {
+    min-height: 680px;
+  }
+
+  .magazine-hero-shade {
+    background:
+      linear-gradient(0deg, rgba(31, 23, 17, 0.74), rgba(31, 23, 17, 0.18) 68%),
+      linear-gradient(90deg, rgba(31, 23, 17, 0.46), rgba(31, 23, 17, 0.12));
+  }
+
+  .magazine-hero-copy {
+    align-self: end;
+    padding: 56px 24px 52px;
+    transform: none;
+  }
+
+  .hero-link-grid,
+  .start-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-link-card {
+    min-height: 0;
+  }
+
+  .favorites-strip {
+    padding: 38px 0 58px;
+  }
+
+  .favorites-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 24px 22px;
+  }
+
+  .favorites-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 24px 10px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .favorites-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .favorite-card {
+    flex: 0 0 72%;
+    scroll-snap-align: start;
+  }
+
+  .magazine-section,
+  .magazine-band {
+    padding: 72px 24px;
+  }
+
+  .story-section {
+    padding-top: 76px;
+  }
+
+  .story-layout,
+  .mood-section,
+  .magazine-heading-split,
+  .gift-section,
+  .nook-section {
+    grid-template-columns: 1fr;
+  }
+
+  .story-tile-large,
+  .mood-card:nth-child(2),
+  .mood-card:nth-child(4) {
+    transform: none;
+  }
+
+  .mood-board {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .room-row {
+    grid-template-columns: 1fr;
+  }
+
+  .room-link,
+  .room-link + .room-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nook-section {
+    padding-bottom: 88px;
+  }
+
+  .nook-image-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .nook-image-stack img:last-child {
+    margin: 18px 0 0 auto;
+    width: 62%;
+  }
+
   .home-section {
     padding: 64px 24px;
   }
@@ -638,5 +1191,30 @@ p {
   .editorial-hero,
   .image-feature {
     grid-template-columns: 1fr;
+  }
+
+  .magazine-hero-copy {
+    transform: none;
+  }
+
+  .hero-link-grid,
+  .start-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .favorites-header {
+    grid-template-columns: 1fr;
+  }
+
+  .story-layout,
+  .mood-section,
+  .gift-section,
+  .nook-section {
+    grid-template-columns: 1fr;
+  }
+
+  .room-row,
+  .mood-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
