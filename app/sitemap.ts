@@ -4,6 +4,7 @@ import { site } from "@/app/data/site";
 const routes = [
   "",
   "/halloween-decor-ideas",
+  "/reading-nook-ideas",
   "/halloween",
   "/fall",
   "/christmas",
