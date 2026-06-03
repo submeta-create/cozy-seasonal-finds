@@ -298,6 +298,207 @@ p {
   white-space: nowrap;
 }
 
+.editorial-page {
+  overflow: hidden;
+}
+
+.editorial-hero {
+  align-items: center;
+  display: grid;
+  gap: 64px;
+  grid-template-columns: minmax(0, 0.98fr) minmax(380px, 0.72fr);
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 76px 28px 92px;
+}
+
+.editorial-hero-copy {
+  display: grid;
+  gap: 22px;
+}
+
+.editorial-hero-copy h1 {
+  max-width: 860px;
+}
+
+.editorial-hero-media {
+  position: relative;
+}
+
+.editorial-hero-media::before {
+  background: #efe2d5;
+  border-radius: 8px;
+  content: "";
+  inset: 26px -22px -26px 22px;
+  position: absolute;
+}
+
+.editorial-hero-media img {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.editorial-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.editorial-link-row a,
+.related-grid a {
+  border: 1px solid rgba(112, 66, 47, 0.2);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 9px 14px;
+}
+
+.editorial-section {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 78px 28px;
+}
+
+.editorial-intro {
+  border-top: 1px solid var(--line);
+}
+
+.editorial-two-column {
+  align-items: end;
+  display: grid;
+  gap: 42px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+}
+
+.editorial-two-column p,
+.image-feature-copy p,
+.recommended-note,
+.faq-item p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.idea-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.idea-card,
+.recommended-card,
+.faq-item {
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(112, 66, 47, 0.16);
+  border-radius: 8px;
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.idea-card {
+  min-height: 250px;
+}
+
+.idea-card h3,
+.faq-item h3 {
+  font-size: 25px;
+}
+
+.idea-card p {
+  align-self: end;
+  color: var(--muted);
+}
+
+.image-feature {
+  align-items: center;
+  display: grid;
+  gap: 42px;
+  grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
+}
+
+.image-feature-photo {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.image-feature-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.recommended-section,
+.related-section {
+  background: #f1e7dc;
+  max-width: none;
+}
+
+.recommended-section > *,
+.related-section > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1184px;
+}
+
+.recommended-note {
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+
+.recommended-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.recommended-card {
+  min-height: 170px;
+}
+
+.recommended-card span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.recommended-card p {
+  align-self: end;
+  color: var(--cranberry);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.related-section {
+  align-items: center;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 0.7fr) minmax(320px, 1fr);
+}
+
+.related-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
 .hub-grid {
   display: grid;
   gap: 16px;
@@ -382,12 +583,42 @@ p {
   }
 
   .intro-grid,
-  .collection-grid {
+  .collection-grid,
+  .editorial-hero,
+  .editorial-two-column,
+  .image-feature,
+  .related-section {
     grid-template-columns: 1fr;
   }
 
   .image-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .editorial-hero {
+    gap: 40px;
+    padding: 56px 24px 72px;
+  }
+
+  .editorial-hero-media {
+    order: -1;
+  }
+
+  .editorial-hero-media::before {
+    inset: 18px -12px -18px 12px;
+  }
+
+  .editorial-section {
+    padding: 64px 24px;
+  }
+
+  .idea-grid,
+  .recommended-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-grid {
+    justify-content: flex-start;
   }
 
   .finds-teaser {
@@ -398,7 +629,14 @@ p {
 
 @media (min-width: 761px) and (max-width: 1040px) {
   .image-card-grid,
-  .collection-grid {
+  .collection-grid,
+  .idea-grid,
+  .recommended-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .editorial-hero,
+  .image-feature {
+    grid-template-columns: 1fr;
   }
 }

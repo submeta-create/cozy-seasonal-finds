@@ -3,6 +3,7 @@ import { site } from "@/app/data/site";
 
 const routes = [
   "",
+  "/halloween-decor-ideas",
   "/halloween",
   "/fall",
   "/christmas",
@@ -22,4 +23,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date()
   }));
 }
-

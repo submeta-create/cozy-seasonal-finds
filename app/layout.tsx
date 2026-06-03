@@ -5,6 +5,7 @@ import { site } from "@/app/data/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
     default: site.name,
     template: `%s | ${site.name}`
@@ -27,4 +28,3 @@ export default function RootLayout({
     </html>
   );
 }
-
