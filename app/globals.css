@@ -998,6 +998,7 @@ p {
 
   .site-header {
     gap: 14px;
+    padding-top: 18px;
     padding-bottom: 18px;
   }
 
@@ -1029,45 +1030,85 @@ p {
   }
 
   .magazine-hero {
-    min-height: 680px;
+    min-height: 590px;
+  }
+
+  .magazine-hero-image {
+    object-position: 58% center;
   }
 
   .magazine-hero-shade {
     background:
-      linear-gradient(0deg, rgba(31, 23, 17, 0.74), rgba(31, 23, 17, 0.18) 68%),
-      linear-gradient(90deg, rgba(31, 23, 17, 0.46), rgba(31, 23, 17, 0.12));
+      linear-gradient(0deg, rgba(31, 23, 17, 0.82), rgba(31, 23, 17, 0.22) 72%),
+      linear-gradient(90deg, rgba(31, 23, 17, 0.55), rgba(31, 23, 17, 0.14));
   }
 
   .magazine-hero-copy {
     align-self: end;
-    padding: 56px 24px 52px;
+    gap: 15px;
+    padding: 40px 18px 28px;
     transform: none;
   }
 
-  .hero-link-grid,
+  .magazine-hero-copy h1 {
+    font-size: clamp(38px, 11vw, 50px);
+    line-height: 0.94;
+    max-width: 360px;
+  }
+
+  .magazine-hero-copy .lede {
+    font-size: 16px;
+    line-height: 1.35;
+    max-width: 350px;
+  }
+
+  .hero-link-grid {
+    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 2px;
+  }
+
   .start-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero-link-card {
-    min-height: 0;
+    grid-template-rows: auto 1fr;
+    min-height: 112px;
+    padding: 13px;
+  }
+
+  .hero-link-card span {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .hero-link-card p {
+    font-size: 12px;
+    line-height: 1.28;
+    margin-top: 8px;
   }
 
   .favorites-strip {
-    padding: 38px 0 58px;
+    padding: 32px 0 46px;
   }
 
   .favorites-header {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 24px 22px;
+    margin: 0 18px 18px;
+  }
+
+  .favorites-header h2 {
+    font-size: 29px;
+    line-height: 1;
   }
 
   .favorites-track {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     overflow-x: auto;
-    padding: 0 24px 10px;
+    padding: 0 18px 8px;
     scroll-snap-type: x proximity;
     scrollbar-width: none;
   }
@@ -1077,17 +1118,34 @@ p {
   }
 
   .favorite-card {
-    flex: 0 0 72%;
+    flex: 0 0 68%;
+    gap: 11px;
     scroll-snap-align: start;
+  }
+
+  .favorite-card img {
+    aspect-ratio: 5 / 4;
+  }
+
+  .favorite-card h3 {
+    font-size: 24px;
   }
 
   .magazine-section,
   .magazine-band {
-    padding: 72px 24px;
+    padding: 54px 18px;
+  }
+
+  .magazine-heading {
+    margin-bottom: 26px;
+  }
+
+  .magazine-heading h2 {
+    font-size: clamp(30px, 9vw, 38px);
   }
 
   .story-section {
-    padding-top: 76px;
+    padding-top: 44px;
   }
 
   .story-layout,
@@ -1108,18 +1166,87 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 
+  .mood-section {
+    gap: 30px;
+  }
+
+  .mood-card {
+    gap: 9px;
+  }
+
+  .mood-card span {
+    font-size: 21px;
+  }
+
+  .mood-card p {
+    font-size: 13px;
+    line-height: 1.32;
+  }
+
   .room-row {
     grid-template-columns: 1fr;
   }
 
   .room-link,
   .room-link + .room-link {
+    min-height: 0;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .start-card {
+    min-height: 150px;
+    padding: 18px;
+  }
+
+  .start-card h3 {
+    font-size: 23px;
+  }
+
+  .start-card p {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .story-layout {
+    gap: 30px;
+  }
+
+  .story-tile {
+    gap: 13px;
+  }
+
+  .story-tile img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .story-tile h3 {
+    font-size: 30px;
+  }
+
+  .story-tile span {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .gift-section {
+    gap: 36px;
+  }
+
+  .gift-list {
+    gap: 12px;
+  }
+
+  .gift-list p {
+    font-size: 15px;
+    padding-top: 12px;
   }
 
   .nook-section {
-    padding-bottom: 88px;
+    gap: 36px;
+    padding-bottom: 62px;
   }
 
   .nook-image-stack {
