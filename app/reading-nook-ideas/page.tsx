@@ -13,20 +13,47 @@ const internalLinks = [
   { href: "/christmas", label: "Christmas Decor" }
 ];
 
+const editorFavorites = [
+  {
+    category: "SMALL SPACES",
+    title: "7 Reading Nook Ideas for Small Spaces",
+    href: "#small-reading-nook-ideas"
+  },
+  {
+    category: "LIGHTING",
+    title: "10 Cozy Reading Lamps Worth Saving",
+    href: "#reading-nook-lighting"
+  },
+  {
+    category: "BUDGET PICK",
+    title: "Reading Chair Ideas Under $200",
+    href: "#reading-nook-finds"
+  },
+  {
+    category: "BOOKISH DECOR",
+    title: "Bookshelf Styling for Cozy Corners",
+    href: "#bookshelf-side-table-styling"
+  }
+];
+
 const nookSections = [
   {
+    id: "small-reading-nook-ideas",
     title: "Small Reading Nook Ideas",
     text: "Use an empty bedroom corner, hallway landing, window area, or living room wall. A compact chair, slim lamp, small table, and soft throw can turn even a tiny space into a cozy reading spot."
   },
   {
+    id: "reading-nook-lighting",
     title: "Reading Nook Lighting",
     text: "Layer a warm floor lamp, table lamp, or plug-in wall sconce with natural window light. Choose soft white bulbs so the corner feels cozy on weeknights and easy to photograph for Pinterest."
   },
   {
+    id: "cozy-chair-throw-ideas",
     title: "Cozy Chair and Throw Ideas",
     text: "Look for an upholstered accent chair, small swivel chair, chaise, or cushioned bench. Add a knit throw, lumbar pillow, and washable blanket for a cozy, lived-in look."
   },
   {
+    id: "bookshelf-side-table-styling",
     title: "Bookshelf and Side Table Styling",
     text: "Style shelves with books, baskets, framed art, candles, and one or two seasonal accents. A side table should hold a mug, current book, lamp, and small catchall tray."
   }
@@ -138,6 +165,21 @@ export default function ReadingNookIdeasPage() {
           </div>
         </section>
 
+        <section className="reading-favorites" aria-labelledby="reading-favorites-heading">
+          <div className="reading-favorites-header">
+            <p className="section-kicker">EDITOR&apos;S FAVORITES</p>
+            <h2 id="reading-favorites-heading">Fresh Reading Nook Ideas Worth Saving</h2>
+          </div>
+          <div className="reading-favorites-grid">
+            {editorFavorites.map((favorite) => (
+              <Link key={favorite.title} href={favorite.href} className="reading-favorite-card">
+                <p>{favorite.category}</p>
+                <h3>{favorite.title}</h3>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="editorial-section editorial-intro">
           <p className="section-kicker">Cozy corner formula</p>
           <div className="editorial-two-column">
@@ -157,7 +199,7 @@ export default function ReadingNookIdeasPage() {
           </div>
           <div className="idea-grid">
             {nookSections.map((section) => (
-              <div key={section.title} className="idea-card">
+              <div key={section.title} id={section.id} className="idea-card">
                 <h3>{section.title}</h3>
                 <p>{section.text}</p>
               </div>
@@ -188,7 +230,11 @@ export default function ReadingNookIdeasPage() {
           </div>
         </section>
 
-        <section className="editorial-section recommended-section" aria-labelledby="finds-heading">
+        <section
+          id="reading-nook-finds"
+          className="editorial-section recommended-section"
+          aria-labelledby="finds-heading"
+        >
           <div className="section-heading">
             <p className="section-kicker">Reading Nook Finds to Source Later</p>
             <h2 id="finds-heading">Placeholder finds for future shopping guides</h2>
