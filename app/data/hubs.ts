@@ -32,8 +32,7 @@ export const hubs: Hub[] = [
   },
   {
     title: "Reading Nooks",
-    href: "/reading-nooks",
+    href: "/reading-nook-ideas",
     description: "Comfortable corners, bookish decor, lighting, shelves, and quiet rituals."
   }
 ];
-

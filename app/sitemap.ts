@@ -10,7 +10,6 @@ const routes = [
   "/christmas",
   "/valentines",
   "/gift-guides",
-  "/reading-nooks",
   "/finds",
   "/about",
   "/privacy",

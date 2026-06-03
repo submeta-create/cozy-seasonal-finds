@@ -10,7 +10,7 @@ const internalLinks = [
   { href: "/fall", label: "Fall" },
   { href: "/christmas", label: "Christmas" },
   { href: "/gift-guides", label: "Gift Guides" },
-  { href: "/reading-nooks", label: "Reading Nooks" },
+  { href: "/reading-nook-ideas", label: "Reading Nooks" },
   { href: "/finds", label: "Finds" }
 ];
 

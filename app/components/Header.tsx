@@ -6,7 +6,7 @@ const navItems = [
   { href: "/christmas", label: "Christmas" },
   { href: "/valentines", label: "Valentines" },
   { href: "/gift-guides", label: "Gift Guides" },
-  { href: "/reading-nooks", label: "Reading Nooks" },
+  { href: "/reading-nook-ideas", label: "Reading Nooks" },
   { href: "/finds", label: "Finds" }
 ];
 

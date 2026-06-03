@@ -38,7 +38,7 @@ const heroLinks = [
   },
   {
     title: "Reading Nook Finds",
-    href: "/reading-nooks",
+    href: "/reading-nook-ideas",
     text: "Chairs, lamps, throws, shelves, and bookish cozy corners."
   }
 ];
@@ -54,7 +54,7 @@ const editorFavorites = [
   {
     label: "Worth saving",
     title: "12 Reading Nook Lamps Worth Saving",
-    href: "/reading-nooks",
+    href: "/reading-nook-ideas",
     image: "/images/home/reading-nook-card.webp",
     alt: "Reading nook with warm lamp, books, chair, and throw blanket"
   },
@@ -87,7 +87,7 @@ const startHereLinks = [
   },
   {
     title: "Reading nook ideas",
-    href: "/reading-nooks",
+    href: "/reading-nook-ideas",
     text: "Build a soft, practical corner for books and slow evenings."
   },
   {
@@ -121,7 +121,7 @@ const moodFinds = [
   },
   {
     title: "Reading nook staples",
-    href: "/reading-nooks",
+    href: "/reading-nook-ideas",
     image: "/images/home/reading-nook-card.webp",
     alt: "Reading nook with chair, books, throw blanket, lamp, and side table",
     text: "Lamps, chairs, throws, shelves, mugs, and bookish decor."
@@ -345,7 +345,7 @@ export default function Home() {
             layered light, tactile throws, warm shelves, and small rituals
             that make every season feel more personal.
           </p>
-          <Link href="/reading-nooks" className="text-link">
+          <Link href="/reading-nook-ideas" className="text-link">
             Explore reading nooks
           </Link>
         </div>
