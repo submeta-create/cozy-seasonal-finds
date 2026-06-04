@@ -5,7 +5,6 @@ const routes = [
   "",
   "/halloween-decor-ideas",
   "/reading-nook-ideas",
-  "/halloween",
   "/fall",
   "/christmas",
   "/valentines",

@@ -6,7 +6,7 @@ import { site } from "@/app/data/site";
 const pageUrl = `${site.url}/halloween-decor-ideas`;
 
 const internalLinks = [
-  { href: "/halloween", label: "Halloween" },
+  { href: "/halloween-decor-ideas", label: "Halloween" },
   { href: "/fall", label: "Fall" },
   { href: "/christmas", label: "Christmas" },
   { href: "/gift-guides", label: "Gift Guides" },

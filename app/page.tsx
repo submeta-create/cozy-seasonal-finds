@@ -47,7 +47,7 @@ const editorFavorites = [
   {
     label: "Editor's pick",
     title: "7 Cozy Halloween Mantel Ideas",
-    href: "/halloween",
+    href: "/halloween-decor-ideas",
     image: "/images/home/halloween-decor-card.webp",
     alt: "Cozy Halloween decor with pumpkins, branches, and candlelight"
   },
@@ -77,7 +77,7 @@ const editorFavorites = [
 const startHereLinks = [
   {
     title: "Seasonal decor ideas",
-    href: "/halloween",
+    href: "/halloween-decor-ideas",
     text: "Browse Halloween, fall, Christmas, and Valentines inspiration."
   },
   {

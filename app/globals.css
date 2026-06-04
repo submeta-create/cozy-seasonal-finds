@@ -1060,18 +1060,29 @@ p {
   }
 
   .site-header {
-    gap: 14px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    gap: 16px;
+    padding: 18px 16px 14px;
   }
 
   .site-nav {
+    border-top: 1px solid rgba(112, 66, 47, 0.14);
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 8px;
     max-width: 100%;
     overflow-x: auto;
-    padding-bottom: 4px;
+    padding: 12px 0 2px;
     scrollbar-width: none;
+    width: 100%;
+  }
+
+  .site-nav a {
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(112, 66, 47, 0.14);
+    border-radius: 999px;
+    flex: 0 0 auto;
+    font-size: 13px;
+    line-height: 1;
+    padding: 9px 12px;
   }
 
   .site-nav::-webkit-scrollbar {
@@ -1093,7 +1104,7 @@ p {
   }
 
   .magazine-hero {
-    min-height: 590px;
+    min-height: 620px;
   }
 
   .magazine-hero-image {
@@ -1102,54 +1113,74 @@ p {
 
   .magazine-hero-shade {
     background:
-      linear-gradient(0deg, rgba(31, 23, 17, 0.82), rgba(31, 23, 17, 0.22) 72%),
-      linear-gradient(90deg, rgba(31, 23, 17, 0.55), rgba(31, 23, 17, 0.14));
+      linear-gradient(0deg, rgba(31, 23, 17, 0.84), rgba(31, 23, 17, 0.36) 54%, rgba(31, 23, 17, 0.12)),
+      linear-gradient(90deg, rgba(31, 23, 17, 0.5), rgba(31, 23, 17, 0.1));
   }
 
   .magazine-hero-copy {
     align-self: end;
-    gap: 15px;
-    padding: 40px 18px 28px;
+    gap: 14px;
+    padding: 58px 20px 30px;
     transform: none;
   }
 
+  .magazine-hero-copy .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    max-width: 300px;
+  }
+
   .magazine-hero-copy h1 {
-    font-size: clamp(38px, 11vw, 50px);
-    line-height: 0.94;
-    max-width: 360px;
+    font-size: clamp(39px, 11vw, 52px);
+    line-height: 0.98;
+    max-width: 370px;
   }
 
   .magazine-hero-copy .lede {
     font-size: 16px;
-    line-height: 1.35;
-    max-width: 350px;
+    line-height: 1.5;
+    max-width: 330px;
   }
 
   .hero-link-grid {
-    gap: 8px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 2px;
+    display: flex;
+    gap: 9px;
+    margin: 12px -20px 0;
+    max-width: none;
+    overflow-x: auto;
+    padding: 0 20px 4px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .hero-link-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .start-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .hero-link-card {
-    grid-template-rows: auto 1fr;
-    min-height: 112px;
-    padding: 13px;
+    background: rgba(255, 250, 244, 0.9);
+    display: flex;
+    flex: 0 0 auto;
+    min-height: 0;
+    padding: 11px 14px;
+    scroll-snap-align: start;
   }
 
   .hero-link-card span {
-    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
     line-height: 1;
+    max-width: none;
+    white-space: nowrap;
   }
 
   .hero-link-card p {
-    font-size: 12px;
-    line-height: 1.28;
-    margin-top: 8px;
+    display: none;
   }
 
   .favorites-strip {
@@ -1225,7 +1256,7 @@ p {
 
   .magazine-section,
   .magazine-band {
-    padding: 54px 18px;
+    padding: 58px 20px;
   }
 
   .magazine-heading {
@@ -1289,8 +1320,9 @@ p {
   }
 
   .start-card {
-    min-height: 150px;
-    padding: 18px;
+    gap: 10px;
+    min-height: 0;
+    padding: 20px;
   }
 
   .start-card h3 {

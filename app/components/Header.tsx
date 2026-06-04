@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const navItems = [
-  { href: "/halloween", label: "Halloween" },
+  { href: "/halloween-decor-ideas", label: "Halloween" },
   { href: "/fall", label: "Fall" },
   { href: "/christmas", label: "Christmas" },
   { href: "/valentines", label: "Valentines" },

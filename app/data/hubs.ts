@@ -7,7 +7,7 @@ export type Hub = {
 export const hubs: Hub[] = [
   {
     title: "Halloween",
-    href: "/halloween",
+    href: "/halloween-decor-ideas",
     description: "Moody decor, spooky-cute accents, and cozy October ideas."
   },
   {
