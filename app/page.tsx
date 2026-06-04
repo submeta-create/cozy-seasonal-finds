@@ -172,6 +172,9 @@ export default function Home() {
             Browse Halloween decor ideas, cozy fall styling, Christmas gift
             guides, reading nook inspiration, and curated cozy home finds.
           </p>
+          <Link href="/halloween-decor-ideas" className="mobile-hero-cta">
+            Explore ideas
+          </Link>
           <div className="hero-link-grid" aria-label="Popular cozy seasonal guides">
             {heroLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hero-link-card">
@@ -181,6 +184,15 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="mobile-hero-links" aria-label="Popular cozy seasonal guides">
+        {heroLinks.map((link) => (
+          <Link key={link.href} href={link.href} className="hero-link-card">
+            <span>{link.title}</span>
+            <p>{link.text}</p>
+          </Link>
+        ))}
       </section>
 
       <section className="favorites-strip" aria-labelledby="favorites-heading">
