@@ -1065,14 +1065,17 @@ p {
   }
 
   .site-nav {
+    -webkit-overflow-scrolling: touch;
     border-top: 1px solid rgba(112, 66, 47, 0.14);
     flex-wrap: nowrap;
     gap: 8px;
-    max-width: 100%;
+    margin: 0 -16px;
+    max-width: none;
     overflow-x: auto;
-    padding: 12px 0 2px;
+    padding: 12px 16px 2px;
+    scroll-padding-inline: 16px;
     scrollbar-width: none;
-    width: 100%;
+    width: calc(100% + 32px);
   }
 
   .site-nav a {
@@ -1083,6 +1086,7 @@ p {
     font-size: 13px;
     line-height: 1;
     padding: 9px 12px;
+    white-space: nowrap;
   }
 
   .site-nav::-webkit-scrollbar {
