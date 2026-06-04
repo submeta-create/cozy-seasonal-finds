@@ -10,7 +10,10 @@ export const metadata: Metadata = {
     default: site.name,
     template: `%s | ${site.name}`
   },
-  description: site.description
+  description: site.description,
+  other: {
+    "p:domain_verify": "822cbff3e65e7dcd67ab07e9806652bf"
+  }
 };
 
 export default function RootLayout({
